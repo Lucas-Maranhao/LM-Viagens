@@ -1,4 +1,4 @@
-package com.example.dreamplace.iu.adapter;
+package com.example.dreamplace.ui.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
