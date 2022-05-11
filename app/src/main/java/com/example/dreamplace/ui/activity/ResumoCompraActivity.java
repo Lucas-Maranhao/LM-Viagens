@@ -5,6 +5,7 @@ import static com.example.dreamplace.ui.activity.PacoteActivityConstantes.CHAVE_
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,8 +28,26 @@ public class ResumoCompraActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resumo_compra);
-        setTitle(TITULO_APPBAR);
         carregaPacoteRecebido();
+        congifuraBotaoVoltar();
+    }
+
+    private void congifuraBotaoVoltar() {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle(TITULO_APPBAR);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                startActivity(new Intent(this, ListaPacotesActivity.class));
+                finishAffinity();
+                break;
+            default:break;
+        }
+        return true;
     }
 
     private void carregaPacoteRecebido() {
