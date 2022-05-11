@@ -6,9 +6,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_entrada"
         android:supportsRtl="true"
         android:theme="@style/Theme.DreamPlace">
+        <activity
+            android:name=".ui.activity.ListaPacotesActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.activity.ResumoCompraActivity"
             android:exported="false" />
@@ -19,7 +22,8 @@
             android:name=".ui.activity.ResumoPacoteActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.ListaPacotesActivity"
+            android:name=".ui.activity.SplashScreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
